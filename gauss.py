@@ -6,7 +6,7 @@ from math import cos,pi
 from numpy import zeros
 
 digits = 17
-num = 100
+num = 10 + 1
 
 def gaussNodes(m,tol=10e-9):
 
@@ -35,12 +35,12 @@ def gaussNodes(m,tol=10e-9):
 
 x, w = gaussNodes(num, tol=eval("10e-%d" % digits))
 
-points = ','.join(("%%.%df" % digits) % x for x in x)
-weights = ','.join(("%%.%df" % digits) % x for x in w)
+points = ', '.join(("%%.%df" % digits) % x for x in x)
+weights = ', '.join(("%%.%df" % digits) % x for x in w)
 
 print """package main
 
-const lob_num = %d
+const N = %d
 
 var (
 	lob_pts = [...]float64{%s}
