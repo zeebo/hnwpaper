@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 	"log"
-	"math"
+	// "math"
 )
 
 func s(x, θ float64) float64 {
@@ -228,5 +228,5 @@ func main() {
 }
 
 func ex(x float64) float64 {
-	return math.Exp(-1.0 * x)
+	return x
 }
